@@ -10,7 +10,27 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130203055653) do
+ActiveRecord::Schema.define(:version => 20130203180228) do
+
+  create_table "districts", :force => true do |t|
+    t.string   "director_name"
+    t.string   "district_name"
+    t.string   "address_line1"
+    t.string   "address_line2"
+    t.string   "city"
+    t.string   "state"
+    t.string   "zip"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "website"
+    t.text     "service_hours"
+    t.integer  "population"
+    t.integer  "district_class"
+    t.float    "latitude"
+    t.float    "longitude"
+    t.datetime "created_at",     :null => false
+    t.datetime "updated_at",     :null => false
+  end
 
   create_table "locations", :force => true do |t|
     t.string   "name"

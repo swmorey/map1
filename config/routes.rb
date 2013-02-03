@@ -1,4 +1,7 @@
 Map::Application.routes.draw do
+  resources :districts
+
+
   resources :locations
   root :to => 'locations#index'
 
