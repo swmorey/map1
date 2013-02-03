@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  director_name: MyString
+  district_name: MyString
+  address_line1: MyString
+  address_line2: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  email: MyString
+  phone: MyString
+  website: MyString
+  service_hours: MyText
+  population: 1
+  district_class: 1
+  latitude: 1.5
+  longitude: 1.5
+
+two:
+  director_name: MyString
+  district_name: MyString
+  address_line1: MyString
+  address_line2: MyString
+  city: MyString
+  state: MyString
+  zip: MyString
+  email: MyString
+  phone: MyString
+  website: MyString
+  service_hours: MyText
+  population: 1
+  district_class: 1
+  latitude: 1.5
+  longitude: 1.5

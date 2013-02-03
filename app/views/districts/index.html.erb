@@ -1,0 +1,51 @@
+<h1>Listing districts</h1>
+
+<table>
+  <tr>
+    <th>Director name</th>
+    <th>District name</th>
+    <th>Address line1</th>
+    <th>Address line2</th>
+    <th>City</th>
+    <th>State</th>
+    <th>Zip</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Website</th>
+    <th>Service hours</th>
+    <th>Population</th>
+    <th>District class</th>
+    <th>Latitude</th>
+    <th>Longitude</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @districts.each do |district| %>
+  <tr>
+    <td><%= district.director_name %></td>
+    <td><%= district.district_name %></td>
+    <td><%= district.address_line1 %></td>
+    <td><%= district.address_line2 %></td>
+    <td><%= district.city %></td>
+    <td><%= district.state %></td>
+    <td><%= district.zip %></td>
+    <td><%= district.email %></td>
+    <td><%= district.phone %></td>
+    <td><%= district.website %></td>
+    <td><%= district.service_hours %></td>
+    <td><%= district.population %></td>
+    <td><%= district.district_class %></td>
+    <td><%= district.latitude %></td>
+    <td><%= district.longitude %></td>
+    <td><%= link_to 'Show', district %></td>
+    <td><%= link_to 'Edit', edit_district_path(district) %></td>
+    <td><%= link_to 'Destroy', district, :method => :delete, :data => { :confirm => 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New District', new_district_path %>
