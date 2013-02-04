@@ -7,6 +7,7 @@ gem 'rails', '3.2.11'
 gem 'json'
 
 gem 'geocoder'
+gem 'fastercsv'
 
 group :production do
 gem 'pg'

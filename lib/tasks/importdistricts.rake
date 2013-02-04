@@ -7,7 +7,7 @@ require 'csv'
 require 'geocoder'
 
 CSV.open("#{Rails.root}/db/districts.csv", "r") do |row|
-    District.create (
+    District.create(
     
    
       :director_name => row[0],
