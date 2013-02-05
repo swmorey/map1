@@ -6,7 +6,7 @@ task :import => :environment do
 require 'csv'
 require 'geocoder'
 
-CSV.open("#{Rails.root}/db/districts.csv", "r") do |row|
+CSV.foreach("#{Rails.root}/db/districts.csv") do |row|
     District.create(
     
    
