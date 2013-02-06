@@ -1,6 +1,6 @@
 class MainController < ApplicationController
   def index
-  @districts = District.all
+  @districts = District.all(:order => :district_name)
 
   end
 
