@@ -9,6 +9,7 @@ gem 'json'
 gem 'geocoder'
 gem 'fastercsv'
 
+
 group :production do
 gem 'pg'
 end
