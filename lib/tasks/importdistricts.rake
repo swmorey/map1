@@ -8,8 +8,6 @@ require 'geocoder'
 
 CSV.foreach("#{Rails.root}/db/districts.csv") do |row|
     District.create(
-    
-   
       :director_name => row[0],
       :district_name => row[1],
       :address_line1 => row[2],
@@ -24,8 +22,6 @@ CSV.foreach("#{Rails.root}/db/districts.csv") do |row|
       :population => row[11],
       :district_class => row[12]
       )
-
-  
   end
 end
 end
