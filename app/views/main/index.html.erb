@@ -1,0 +1,71 @@
+
+
+
+<div id="map" style="height: 600px; width: 700px; float: left;"></div>
+
+<div id="map-side-bar" style="float: right;">
+<% @districts.each do |district| %>
+  <div class="map-location" data-jmapping="{id: <%= district.id %>, point: {lng: <%= district.longitude %>, lat: <%= district.latitude %>}, category: 'library'}">
+    <a href="#" class="map-link"><%= district.district_name %></a>
+    <div class="info-box">
+      <h3><%= district.district_name %></h3>
+
+<p>
+
+  <%= district.address_line1 %>
+</p>
+
+<p>
+
+  <%= district.address_line2 %>
+</p>
+
+<p>
+  <%= district.city %>,  <%= district.state %>  <%= district.zip %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <a href="<%= district.website %>">
+    <%= district.website %>
+  </a>	
+</p>
+
+
+<p>
+  <b>Phone:</b>
+  <%= district.phone %>
+</p>
+
+
+
+<p>
+  <b>Service hours:</b>
+  <%= district.service_hours %>
+</p>
+
+<p>
+  <b>Population:</b>
+  <%= district.population %>
+</p>
+<p>
+   <b>Director:</b>
+  <%= district.director_name %>
+</p>
+<p>
+  <b>Email:</b>
+  <%= district.email %>
+</p>
+
+
+      </p>
+    </div>
+  </div>
+ <% end %> 
+</div>
+
+  <script type="text/javascript">
+$(document).ready(function(){
+  $('#map').jMapping();
+});
+</script>

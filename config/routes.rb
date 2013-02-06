@@ -1,9 +1,15 @@
 Map::Application.routes.draw do
+  get "main/index"
+
+  get "main/show"
+
+  get "main/list"
+
   resources :districts
 
 
   resources :locations
-  root :to => 'locations#index'
+  root :to => 'main#index'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
