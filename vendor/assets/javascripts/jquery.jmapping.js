@@ -155,17 +155,17 @@
               position: point,
               map: map
             });
-          } else {
-            marker = new StyledMarker({
-              styleIcon: new StyledIcon(StyledIconTypes.MARKER, icon_options),
-              position: point,
-              map: map
-            });
-          }
+          } 
         } else {
           marker = new google.maps.Marker({
             position: point,
-            map: map
+            map: map,
+            icon: new google.maps.MarkerImage(
+    'https://dl.dropbox.com/u/228894/libraryred.png',
+    new google.maps.Size(32, 37),
+    new google.maps.Point(0,0),
+    new google.maps.Point(17, 32)
+  )
           });
         }
 
