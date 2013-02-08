@@ -17,3 +17,4 @@
 //= require StyledMarker
 //= require markermanager
 //= require jquery.jmapping
+//= require jquery-gmaps-latlon-picker

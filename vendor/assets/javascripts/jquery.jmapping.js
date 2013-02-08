@@ -77,7 +77,9 @@
               style: google.maps.NavigationControlStyle.SMALL
             },
             mapTypeControl: false,
-            mapTypeId: google.maps.MapTypeId.ROADMAP,
+            mapTypeId: google.maps.MapTypeId.HYBRID,
+            maxZoom: 19, 
+            minZoom: 7, 
             zoom: 9
           });
         }
@@ -181,6 +183,7 @@
               }
             });
                    map.setCenter(point),
+                   map.setZoom(17),
             info_window.open(map, marker);
       
           });
