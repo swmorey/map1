@@ -1,9 +1,11 @@
 
 
+<div id= "wrapper"> 
+<div id="map" style="height: 100%; width: 100%"></div>
+</div>
 
-<div id="map" style="height: 600px; width: 700px; float: left;"></div>
-
-<div id="map-side-bar" style="float: right;">
+<div id="over_map">
+<div id="map-side-bar">
 <% @districts.each do |district| %>
   <div class="map-location" data-jmapping="{id: <%= district.id %>, point: {lng: <%= district.longitude %>, lat: <%= district.latitude %>}, category: 'library'}">
     <a href="#" class="map-link"><%= district.district_name %></a>
@@ -63,7 +65,7 @@
   </div>
  <% end %> 
 </div>
-
+</div>
   <script type="text/javascript">
 $(document).ready(function(){
   $('#map').jMapping();

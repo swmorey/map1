@@ -180,7 +180,9 @@
                 iwindow.close();
               }
             });
+                   map.setCenter(point),
             info_window.open(map, marker);
+      
           });
         }
 

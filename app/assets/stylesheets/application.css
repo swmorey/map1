@@ -11,3 +11,29 @@
  *= require_self
  *= require_tree .
  */
+
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0 0 0 0;
+}
+
+
+#wrapper 
+{
+  position: relative; 
+  margin:0 auto;
+  height: 100%;
+  width: 100%;
+
+}
+
+#over_map 
+{
+  position: absolute; 
+  top: 40px; 
+  left: 40px; 
+  z-index: 99;
+  background-color: #FFF;
+  padding: 10px:
+}
