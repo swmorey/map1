@@ -63,22 +63,18 @@
     <%= f.label :district_class %><br />
     <%= f.number_field :district_class %>
   </div>
-  <div class="field">
-    <%= f.label :latitude %><br />
-    <%= f.text_field :latitude %>
-  </div>
-  <div class="field">
-    <%= f.label :longitude %><br />
-    <%= f.text_field :longitude %>
-  </div>
+
+  <%= field_set_tag 'Name', :class => "gllpLatlonPicker" do %> 
+   	<div class="gllpMap">Google Maps</div>
+    <%= f.hidden_field :latitude, :class => "gllpLatitude" %>
+
+    <%= f.hidden_field :longitude, :class => "gllpLongitude" %>
+    <input type="hidden" class="gllpZoom" value="5"/>
+<% end %>
   <div class="actions">
     <%= f.submit %>
   </div>
   
-  <fieldset class="gllpLatlonPicker">
-	<div class="gllpMap">Google Maps</div>
-	<input type="hidden" class="gllpLatitude"/>
-	<input type="hidden" class="gllpLongitude"/>
-	<input type="hidden" class="gllpZoom"/>
-</fieldset>
+
 <% end %>
+
