@@ -60,7 +60,7 @@ class DistrictsController < ApplicationController
 
     respond_to do |format|
       if @district.update_attributes(params[:district])
-        format.html { redirect_to @district, :notice => 'District was successfully updated.' }
+        format.html { redirect_to :back, :notice => 'District was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render :action => "edit" }

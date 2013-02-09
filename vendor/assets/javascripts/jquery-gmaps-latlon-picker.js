@@ -31,7 +31,7 @@ var GMapsLatLonPicker = (function() {
 		queryLocationNameWhenLatLngChanges: true,
 		queryElevationWhenLatLngChanges: true,
 		mapOptions : {
-			mapTypeId: google.maps.MapTypeId.ROADMAP,
+			mapTypeId: google.maps.MapTypeId.HYBRID,
 			mapTypeControl: false,
 			disableDoubleClickZoom: true,
 			zoomControlOptions: true,
