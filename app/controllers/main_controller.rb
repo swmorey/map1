@@ -1,4 +1,6 @@
 class MainController < ApplicationController
+   layout "application", only: [:index]
+ 
   def index
   @districts = District.all(:order => :district_name)
 
@@ -9,4 +11,9 @@ class MainController < ApplicationController
 
   def list
   end
+
+
+
+
+
 end

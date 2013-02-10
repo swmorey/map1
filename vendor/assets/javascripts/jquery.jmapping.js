@@ -79,14 +79,15 @@
             mapTypeControl: false,
             mapTypeId: google.maps.MapTypeId.HYBRID,
             maxZoom: 19, 
-            minZoom: 7, 
-            zoom: 9
+            minZoom: 6, 
+            
           });
         }
         map.fitBounds(bounds);
-        if (settings.force_zoom_level){
-          map.setZoom(settings.force_zoom_level);
-        }
+var listener = google.maps.event.addListener(map, "idle", function() { 
+  if (map.getZoom() >7) map.setZoom(7); 
+  google.maps.event.removeListener(listener); 
+});
         return map;
       };
       
@@ -182,7 +183,6 @@
                 iwindow.close();
               }
             });
-                   map.getStreetView().setVisible(false);
                    map.setCenter(point),
                    map.setZoom(17),
             info_window.open(map, marker);

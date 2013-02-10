@@ -1,0 +1,27 @@
+<h1>Listing districtclasses</h1>
+
+<table>
+  <tr>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @districtclasses.each do |districtclass| %>
+  <tr>
+    <td><%= districtclass.id %></td>
+    <td><%= districtclass.title %></td>
+    <td><%= districtclass.description %></td>
+    <td><%= link_to 'Show', districtclass %></td>
+    <td><%= link_to 'Edit', edit_districtclass_path(districtclass) %></td>
+    <td><%= link_to 'Destroy', districtclass, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Districtclass', new_districtclass_path %>

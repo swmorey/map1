@@ -1,6 +1,6 @@
 class District < ActiveRecord::Base
   attr_accessible :address_line1, :address_line2, :city, :director_name, :district_class, :district_name, :email, :latitude, :longitude, :phone, :population, :service_hours, :state, :website, :zip
-
+  belongs_to :districtclass
     geocoded_by :address
 
 

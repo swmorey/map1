@@ -20,7 +20,139 @@
 </head>
 <body>
 
-<%= yield %>
+
+
+<div id= "wrapper"> 
+<div id="map" style="height: 100%; width: 100%"></div>
+</div>
+
+<div id="over_map">
+<div id="map-side-bar" style="height: 800px; overflow: auto; background-color: #FFF; padding: 10px; opacity:0.75;
+filter:alpha(opacity=75); /* For IE8 and earlier */ ">
+<% @districts.each do |district| %>
+  <div class="map-location" data-jmapping="{id: <%= district.id %>, point: {lng: <%= district.longitude %>, lat: <%= district.latitude %>}, category: 'class<%= district.district_class %>'}">
+    <a href="#" class="map-link"><%= district.district_name %></a>
+    <div class="info-box">
+      <h3><%= district.district_name %></h3>
+
+<p>
+
+  <%= district.address_line1 %>
+</p>
+
+<p>
+
+  <%= district.address_line2 %>
+</p>
+
+<p>
+  <%= district.city %>,  <%= district.state %>  <%= district.zip %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <a class="district_website fancybox.iframe" href="<%= district.website %>">
+    <%= district.website %>
+  </a>	
+</p>
+
+
+<p>
+  <b>Phone:</b>
+  <%= district.phone %>
+</p>
+
+
+
+<p>
+  <b>Service hours:</b>
+  <%= district.service_hours %>
+</p>
+
+<p>
+  <b>Population:</b>
+  <%= district.population %>
+</p>
+<p>
+   <b>Director:</b>
+  <%= district.director_name %>
+</p>
+<p>
+  <b>Email:</b>
+  <%= district.email %>
+</p>
+<a class="district_website fancybox.iframe" href="/districts/<%= district.id %>/edit">
+Edit
+</a>
+
+
+
+      </p>
+    </div>
+  </div>
+ <% end %> 
+</div>
+</div>
+  <script type="text/javascript">
+$(document).ready(function(){
+$('#map').jMapping({
+
+    category_icon_options: function(category){
+
+       if (category.match('class1')) {
+
+              return new google.maps.MarkerImage('https://dl.dropbox.com/u/228894/librarygreen.png');
+
+           } 
+      if (category.match('class2')) {
+
+              return new google.maps.MarkerImage('https://dl.dropbox.com/u/228894/libraryyellow.png');
+
+           } 
+     if (category.match('class3')) {
+
+              return new google.maps.MarkerImage('https://dl.dropbox.com/u/228894/libraryorange.png');
+
+           } 
+    if (category.match('class4')) {
+
+              return new google.maps.MarkerImage('https://dl.dropbox.com/u/228894/libraryred.png');
+
+           } 
+    if (category.match('class5')) {
+
+              return new google.maps.MarkerImage('https://dl.dropbox.com/u/228894/librarypurple.png');
+
+           } 
+           if (category.match('class6')) {
+
+              return new google.maps.MarkerImage('https://dl.dropbox.com/u/228894/library.png');
+
+           } 
+          
+           
+
+         }
+
+    });
+});
+</script>
+
+   <script type = "text/javascript">
+$(document).ready(function() {
+	$(".district_website").fancybox({
+		maxWidth	: 1200,
+		maxHeight	: 1000,
+		fitToView	: false,
+		width		: '90%',
+		height		: '90%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+});
+</script>
 
 </body>
 </html>
