@@ -1,7 +1,7 @@
 class DistrictclassesController < ApplicationController
   # GET /districtclasses
   # GET /districtclasses.json
-    layout "application", only: [:show]
+    layout "blank", only: [:show, :index, :new, :edit]
   def index
     @districtclasses = Districtclass.all
 
