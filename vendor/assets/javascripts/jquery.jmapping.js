@@ -182,6 +182,7 @@
                 iwindow.close();
               }
             });
+                   map.getStreetView().setVisible(false);
                    map.setCenter(point),
                    map.setZoom(17),
             info_window.open(map, marker);
