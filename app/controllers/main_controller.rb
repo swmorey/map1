@@ -1,12 +1,12 @@
 class MainController < ApplicationController
-   layout "application", only: [:index]
+   layout "blank", only: [:about]
  
   def index
   @districts = District.all(:order => :district_name)
 
   end
 
-  def show
+  def about
   end
 
   def list

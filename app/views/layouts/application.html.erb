@@ -25,7 +25,12 @@
 <div id= "wrapper"> 
 <div id="map" style="height: 100%; width: 100%"></div>
 </div>
-<div id="controls"> 
+<div id="sitemenu" class="rounded-corners"> 
+<ul>
+<li><a class="on_website fancybox.iframe" href="/main/about">About</a></li>
+</ul>
+</div>
+<div id="controls" class="rounded-corners"> 
 <ul>
 <li>
 <a href="/main/class/1">
@@ -65,8 +70,8 @@ Class 6
 </li>
 </ul>
 </div>
-<div id="over_map">
-<div id="map-side-bar" style="height: 800px; overflow: auto; background-color: #FFF; padding: 10px; opacity:0.75;
+<div id="over_map" class="rounded-corners">
+<div id="map-side-bar" class="rounded-corners" style=" height: 100%; width: 90%; overflow: scroll; background-color: #FFF; padding: 10px; opacity:0.75;
 filter:alpha(opacity=75); /* For IE8 and earlier */ ">
 <%= yield :menuheading %>
 <% @districts.each do |district| %>
@@ -194,6 +199,23 @@ $(document).ready(function() {
 	});
 });
 </script>
+   <script type = "text/javascript">
+$(document).ready(function() {
+	$(".on_website").fancybox({
+		maxWidth	: 600,
+		maxHeight	: 600,
+		fitToView	: true,
+		autoScale	: true,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none',
+		'scrolling'   : 'no'
+	});
+});
+</script>
+
+
+
 
 </body>
 </html>

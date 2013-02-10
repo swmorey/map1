@@ -6,7 +6,7 @@ end
 
   get "main/index"
 
-  get "main/show"
+  get "main/about"
 
   get "main/list"
   
