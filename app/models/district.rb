@@ -4,7 +4,7 @@ class District < ActiveRecord::Base
     geocoded_by :address
 
 
-  after_validation :geocode, :on => :create 
+  after_validation :geocode
   
 def address
  address = [address_line1, address_line2, city, state, zip].compact.join(', ')

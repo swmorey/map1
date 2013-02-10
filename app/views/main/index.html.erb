@@ -5,7 +5,8 @@
 </div>
 
 <div id="over_map">
-<div id="map-side-bar">
+<div id="map-side-bar" style="height: 800px; overflow: auto; background-color: #FFF; padding: 10px; opacity:0.75;
+filter:alpha(opacity=75); /* For IE8 and earlier */ ">
 <% @districts.each do |district| %>
   <div class="map-location" data-jmapping="{id: <%= district.id %>, point: {lng: <%= district.longitude %>, lat: <%= district.latitude %>}, category: 'library'}">
     <a href="#" class="map-link"><%= district.district_name %></a>

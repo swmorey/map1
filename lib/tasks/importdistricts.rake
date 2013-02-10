@@ -20,7 +20,9 @@ CSV.foreach("#{Rails.root}/db/districts.csv") do |row|
       :website => row[9],
       :service_hours => row[10],
       :population => row[11],
-      :district_class => row[12]
+      :district_class => row[12],
+      :latitude => row[13],
+      :longitude => row[14],
       )
   end
 end

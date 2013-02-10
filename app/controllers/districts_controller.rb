@@ -4,11 +4,28 @@ class DistrictsController < ApplicationController
   def index
     @districts = District.all
 
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render :json => @districts }
+
+       respond_to do |wants| 
+    wants.html 
+    wants.csv do 
+       csv_string = CSV.generate do |csv| 
+ 
+    # data rows 
+    @districts.each do |d| 
+      csv << [d.director_name, d.district_name, d.address_line1, d.address_line2, d.city, d.state, d.zip, d.email, d.phone, d.website, d.service_hours, d.population, d.district_class, d.latitude, d.longitude] 
+    end 
+  end 
+ 
+  # send it to the browsah
+  send_data csv_string, 
+            :type => 'text/csv; charset=iso-8859-1; header=present', 
+            :disposition => "attachment; filename=districts.csv" 
     end
   end
+end
+
+
+
 
   # GET /districts/1
   # GET /districts/1.json
