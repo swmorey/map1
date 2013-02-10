@@ -25,10 +25,50 @@
 <div id= "wrapper"> 
 <div id="map" style="height: 100%; width: 100%"></div>
 </div>
-
+<div id="controls"> 
+<ul>
+<li>
+<a href="/main/class/1">
+<img src="https://dl.dropbox.com/u/228894/librarygreen.png">
+Class 1
+</a>
+</li>
+<li>
+<a href="/main/class/2">
+<img src="https://dl.dropbox.com/u/228894/libraryyellow.png">
+Class 2
+</a>
+</li>
+<li>
+<a href="/main/class/3">
+<img src="https://dl.dropbox.com/u/228894/libraryorange.png">
+Class 3
+</a>
+</li>
+<li>
+<a href="/main/class/4">
+<img src="https://dl.dropbox.com/u/228894/libraryred.png">
+Class 4
+</a>
+</li>
+<li>
+<a href="/main/class/5">
+<img src="https://dl.dropbox.com/u/228894/librarypurple.png">
+Class 5
+</a>
+</li>
+<li>
+<a href="/main/class/6">
+<img src="https://dl.dropbox.com/u/228894/library.png">
+Class 6
+</a>
+</li>
+</ul>
+</div>
 <div id="over_map">
 <div id="map-side-bar" style="height: 800px; overflow: auto; background-color: #FFF; padding: 10px; opacity:0.75;
 filter:alpha(opacity=75); /* For IE8 and earlier */ ">
+<%= yield :menuheading %>
 <% @districts.each do |district| %>
   <div class="map-location" data-jmapping="{id: <%= district.id %>, point: {lng: <%= district.longitude %>, lat: <%= district.latitude %>}, category: 'class<%= district.district_class %>'}">
     <a href="#" class="map-link"><%= district.district_name %></a>
@@ -136,6 +176,7 @@ $('#map').jMapping({
 
     });
 });
+
 </script>
 
    <script type = "text/javascript">

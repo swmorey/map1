@@ -80,15 +80,19 @@
             mapTypeId: google.maps.MapTypeId.HYBRID,
             maxZoom: 19, 
             minZoom: 6, 
-            
+           
           });
         }
+        map.setCenter(new google.maps.LatLng(37.4419, -122.1419)),
         map.fitBounds(bounds);
+
 var listener = google.maps.event.addListener(map, "idle", function() { 
   if (map.getZoom() >7) map.setZoom(7); 
   google.maps.event.removeListener(listener); 
 });
+       
         return map;
+        
       };
       
       var getPlaces = function(){
@@ -183,6 +187,7 @@ var listener = google.maps.event.addListener(map, "idle", function() {
                 iwindow.close();
               }
             });
+                   map.getStreetView().setVisible(false);
                    map.setCenter(point),
                    map.setZoom(17),
             info_window.open(map, marker);
