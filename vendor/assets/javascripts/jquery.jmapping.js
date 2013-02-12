@@ -159,9 +159,10 @@ var listener = google.maps.event.addListener(map, "idle", function() {
           icon_options = chooseIconOptions(place_data.category);
           if ((typeof icon_options === "string") || (icon_options instanceof google.maps.MarkerImage)){
             marker = new google.maps.Marker({
-              icon: icon_options,
+              icon: icon_options,  
               position: point,
-              map: map
+              map: map,
+           
             });
           } 
         } else {
@@ -197,7 +198,8 @@ var listener = google.maps.event.addListener(map, "idle", function() {
           });
           
                   window.regionalview = function (lat,lng) {
-                 var currentmarker = new google.maps.LatLng(lat, lng);
+                  var adjustlat = (lat + .09);
+                 var currentmarker = new google.maps.LatLng(adjustlat, lng);
                   map.setZoom(10);
                   map.setCenter(currentmarker);
              
@@ -205,8 +207,8 @@ var listener = google.maps.event.addListener(map, "idle", function() {
   }
   
          window.stateview = function (lat,lng) {
-    
-       var currentmarker = new google.maps.LatLng(lat, lng);
+    var adjustlat = (lat + .5);
+       var currentmarker = new google.maps.LatLng(adjustlat, lng);
                   map.setZoom(8);
                   map.setCenter(currentmarker);
              
@@ -214,14 +216,16 @@ var listener = google.maps.event.addListener(map, "idle", function() {
   }
   
     window.cityview = function (lat,lng) {
-          var currentmarker = new google.maps.LatLng(lat, lng);
-                  map.setZoom(14);
+          var adjustlat = (lat + .007);
+          var currentmarker = new google.maps.LatLng(adjustlat, lng);
+                  map.setZoom(13);
                   map.setCenter(currentmarker);
              
   }
   
        window.streetview = function (lat,lng) {
-          var currentmarker = new google.maps.LatLng(lat, lng);
+        var adjustlat = (lat + .0008);
+          var currentmarker = new google.maps.LatLng(adjustlat, lng);
                   map.setZoom(17);
                   map.setCenter(currentmarker);
              
