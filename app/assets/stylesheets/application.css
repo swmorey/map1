@@ -43,6 +43,19 @@ body, html {
 }
 
 
+#map-side-bar a
+{
+text-decoration:none;
+padding: 2px;
+margin: 2px;
+}
+
+#map-side-bar a:hover
+{
+background-color: #0066CC;
+
+}
+
 #viewcontrols
 {
 
@@ -59,11 +72,9 @@ list-style-type: none;
 
 #viewcontrols ul li
 {
-margin-left: 10px;
-margin-right: 10px;
+
+margin-right: 5px;
 float: left;
-
-
 padding: 5px;
 
 }

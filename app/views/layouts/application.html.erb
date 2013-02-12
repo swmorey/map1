@@ -126,23 +126,25 @@ filter:alpha(opacity=75); /* For IE8 and earlier */ ">
   <b>Email:</b>
   <%= district.email %>
 </p>
-<a class="district_website fancybox.iframe" href="/districts/<%= district.id %>/edit">
-Edit
-</a>
 
 
-
+<p>
+<b>Zoom To:</b>
       </p>
       <div id="viewcontrols">
       <ul>
+   
       <li>
-      <a  onclick="stateview(<%= district.latitude %>, <%= district.longitude %>)">State View</a>
+      <a  onclick="stateview(<%= district.latitude %>, <%= district.longitude %>)">State Level</a>
       </li>
       <li>
-      <a  onclick="regionalview(<%= district.latitude %>, <%= district.longitude %>)">Regional View</a>
+      <a  onclick="regionalview(<%= district.latitude %>, <%= district.longitude %>)">Region Level</a>
       </li>
       <li>
-      <a  onclick="cityview(<%= district.latitude %>, <%= district.longitude %>)">City View</a>
+      <a  onclick="cityview(<%= district.latitude %>, <%= district.longitude %>)">City Level</a>
+      </li>
+      <li>
+      <a  onclick="streetview(<%= district.latitude %>, <%= district.longitude %>)">Street Level</a>
       </li>
       </ul>
       </div>

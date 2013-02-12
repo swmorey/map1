@@ -207,15 +207,22 @@ var listener = google.maps.event.addListener(map, "idle", function() {
          window.stateview = function (lat,lng) {
     
        var currentmarker = new google.maps.LatLng(lat, lng);
-                  map.setZoom(7);
+                  map.setZoom(8);
                   map.setCenter(currentmarker);
              
 
   }
   
-       window.cityview = function (lat,lng) {
+    window.cityview = function (lat,lng) {
           var currentmarker = new google.maps.LatLng(lat, lng);
-                  map.setZoom(16);
+                  map.setZoom(14);
+                  map.setCenter(currentmarker);
+             
+  }
+  
+       window.streetview = function (lat,lng) {
+          var currentmarker = new google.maps.LatLng(lat, lng);
+                  map.setZoom(17);
                   map.setCenter(currentmarker);
              
   }

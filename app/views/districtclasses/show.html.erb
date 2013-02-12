@@ -1,4 +1,8 @@
 <% content_for :menuheading do %>
-<h4 style="padding: 2px; margin: 0px;"><%= @districtclass.title%> Districts (<%= @districts.count %>)</h4>
+<h4 style="padding: 2px; margin: 0px;">
+<%= @districtclass.title%> Districts (<%= @districts.count %>) </h4>
+<i>Service Area Populations <%= @districtclass.description %></i>
+</br>
 <a href="/main/index" style="padding: 2px;">Show All Districts</a> 
+
 <% end %>
