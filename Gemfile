@@ -8,7 +8,7 @@ gem 'json'
 
 gem 'geocoder'
 gem 'fastercsv'
-
+gem 'newrelic_rpm'
 
 group :production do
 gem 'pg'
