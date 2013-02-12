@@ -30,16 +30,67 @@ body, html {
 
 #over_map 
 {
-  height: 90%;
-  position: absolute; 
-  top: 20px; 
-  left: 40px; 
   
+  height: 81%;
+  position: absolute; 
+  top: 30px; 
+  left: 40px; 
+ 
   z-index: 99;
   padding: 10px;
   overflow: hidden;
 
 }
+
+
+#viewcontrols
+{
+
+}
+
+
+#viewcontrols ul
+{
+list-style-type: none;
+ display: inline;
+
+
+}
+
+#viewcontrols ul li
+{
+margin-left: 10px;
+margin-right: 10px;
+float: left;
+
+
+padding: 5px;
+
+}
+
+#viewcontrols ul li a
+{
+
+color: #fff;
+padding: 5px;
+background-color: #000;
+
+}
+
+#viewcontrols ul li a:hover
+{
+
+background-color: #0066CC;
+
+}
+
+#viewcontrols ul li a:active
+{
+
+background-color: #0066CC;
+
+}
+
 
 #controls
 {
@@ -50,7 +101,7 @@ body, html {
   padding-bottom: 5px;
   padding-top: 5px;
   position: absolute; 
-  bottom: 40px; 
+  bottom: 30px; 
   right: 40px; 
   width: 700px;
   height: 35px;

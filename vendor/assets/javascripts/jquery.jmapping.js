@@ -80,6 +80,8 @@
             mapTypeId: google.maps.MapTypeId.HYBRID,
             maxZoom: 19, 
             minZoom: 6, 
+            
+
            
           });
         }
@@ -98,6 +100,7 @@ var listener = google.maps.event.addListener(map, "idle", function() {
       var getPlaces = function(){
         return $(settings.side_bar_selector+' '+settings.location_selector);
       };
+      
       
       var getPlacesData = function(doUpdate){
         return places.map(function(){
@@ -189,10 +192,37 @@ var listener = google.maps.event.addListener(map, "idle", function() {
             });
                    map.getStreetView().setVisible(false)
                    map.setCenter(point),
-                   map.setZoom(17),
             info_window.open(map, marker);
       
           });
+          
+                  window.regionalview = function (lat,lng) {
+                 var currentmarker = new google.maps.LatLng(lat, lng);
+                  map.setZoom(10);
+                  map.setCenter(currentmarker);
+             
+                  
+  }
+  
+         window.stateview = function (lat,lng) {
+    
+       var currentmarker = new google.maps.LatLng(lat, lng);
+                  map.setZoom(6);
+                  map.setCenter(currentmarker);
+             
+
+  }
+  
+       window.cityview = function (lat,lng) {
+          var currentmarker = new google.maps.LatLng(lat, lng);
+                  map.setZoom(16);
+                  map.setCenter(currentmarker);
+             
+  }
+  
+  
+  
+          
         }
 
         gmarkers[parseInt(place_data.id, 10)] = marker;
@@ -263,6 +293,9 @@ var listener = google.maps.event.addListener(map, "idle", function() {
         }
       };
       $(document).trigger('afterMapping.jMapping', [jMapper]);
+      
+
+  
       return jMapper;
     } else {
       return $(map_elm).data('jMapping');
@@ -283,6 +316,8 @@ var listener = google.maps.event.addListener(map, "idle", function() {
       return new google.maps.LatLng(place_point.lat, place_point.lng);
     }
   });
+  
+
   
   $.fn.jMapping = function(options){
     if ((options == 'update') && $(this[0]).data('jMapping')){

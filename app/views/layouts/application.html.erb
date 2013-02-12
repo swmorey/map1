@@ -133,6 +133,19 @@ Edit
 
 
       </p>
+      <div id="viewcontrols">
+      <ul>
+      <li>
+      <a  onclick="stateview(<%= district.latitude %>, <%= district.longitude %>)">State View</a>
+      </li>
+      <li>
+      <a  onclick="regionalview(<%= district.latitude %>, <%= district.longitude %>)">Regional View</a>
+      </li>
+      <li>
+      <a  onclick="cityview(<%= district.latitude %>, <%= district.longitude %>)">City View</a>
+      </li>
+      </ul>
+      </div>
     </div>
   </div>
  <% end %> 
@@ -213,9 +226,7 @@ $(document).ready(function() {
 	});
 });
 </script>
-
-
-
+ 
 
 </body>
 </html>
