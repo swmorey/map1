@@ -207,7 +207,7 @@ var listener = google.maps.event.addListener(map, "idle", function() {
          window.stateview = function (lat,lng) {
     
        var currentmarker = new google.maps.LatLng(lat, lng);
-                  map.setZoom(6);
+                  map.setZoom(7);
                   map.setCenter(currentmarker);
              
 
