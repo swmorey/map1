@@ -3,9 +3,6 @@ class District < ActiveRecord::Base
   belongs_to :districtclass
     geocoded_by :address
 
-
-  after_validation :geocode
-  
 def address
  address = [address_line1, address_line2, city, state, zip].compact.join(', ')
   end 

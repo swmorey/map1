@@ -2,6 +2,7 @@ class DistrictsController < ApplicationController
   # GET /districts
   # GET /districts.json
    layout "blank", only: [:show, :index, :new, :edit]
+   
   def index
     @districts = District.all
 

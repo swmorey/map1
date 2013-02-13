@@ -9,7 +9,7 @@ gem 'json'
 gem 'geocoder'
 gem 'fastercsv'
 gem 'newrelic_rpm'
-
+gem 'dalli'
 group :production do
 gem 'pg'
 end
