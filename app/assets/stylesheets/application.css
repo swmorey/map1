@@ -108,7 +108,7 @@ background-color: #0066CC;
   background-color: #fff;
   opacity:0.75;
   filter:alpha(opacity=75); /* For IE8 and earlier */
-  padding-left: 20px;
+  padding-left: 17px;
   padding-bottom: 5px;
   padding-top: 5px;
   position: absolute; 
@@ -129,7 +129,7 @@ background-color: #0066CC;
 }
 #controls ul li{
 vertical-align:middle;
- margin-right: 30px;
+ margin-right: 26px;
  padding: 0px;
  float:left;
  
@@ -140,6 +140,11 @@ vertical-align:middle;
 
 #controls ul li img{
 vertical-align:middle
+}
+
+#controls ul li img a{
+vertical-align:middle;
+border: 0px;
 }
 
 #controls ul li a{

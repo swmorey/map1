@@ -198,7 +198,7 @@ var listener = google.maps.event.addListener(map, "idle", function() {
           });
           
                   window.regionalview = function (lat,lng) {
-                  var adjustlat = (lat + .09);
+                  var adjustlat = (lat + .2);
                  var currentmarker = new google.maps.LatLng(adjustlat, lng);
                   map.setZoom(10);
                   map.setCenter(currentmarker);
@@ -207,7 +207,7 @@ var listener = google.maps.event.addListener(map, "idle", function() {
   }
   
          window.stateview = function (lat,lng) {
-    var adjustlat = (lat + .5);
+    var adjustlat = (lat + .7);
        var currentmarker = new google.maps.LatLng(adjustlat, lng);
                   map.setZoom(8);
                   map.setCenter(currentmarker);
@@ -216,7 +216,7 @@ var listener = google.maps.event.addListener(map, "idle", function() {
   }
   
     window.cityview = function (lat,lng) {
-          var adjustlat = (lat + .007);
+          var adjustlat = (lat + .02);
           var currentmarker = new google.maps.LatLng(adjustlat, lng);
                   map.setZoom(13);
                   map.setCenter(currentmarker);
@@ -224,7 +224,7 @@ var listener = google.maps.event.addListener(map, "idle", function() {
   }
   
        window.streetview = function (lat,lng) {
-        var adjustlat = (lat + .0008);
+        var adjustlat = (lat + .0015);
           var currentmarker = new google.maps.LatLng(adjustlat, lng);
                   map.setZoom(17);
                   map.setCenter(currentmarker);
