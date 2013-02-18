@@ -18,3 +18,6 @@
 //= require markermanager
 //= require jquery.jmapping
 //= require jquery-gmaps-latlon-picker
+//= require jquery_ujs
+//= require dataTables/jquery.dataTables
+//= require jquery.dataTables.columnFilter

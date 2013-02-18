@@ -16,11 +16,29 @@
 <script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-media.js?v=1.0.5"></script>
 <link rel="stylesheet" href="/fancybox/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
 <script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
-  
+ <script type = "text/javascript" charset="utf-8">
+$(document).ready( function () {
+		$('#districts').dataTable().columnFilter({ 	
+		sPlaceHolder: "head:before",
+					aoColumns: [  { type: "select" },
+				    	 		 null,
+                                 null,
+                                 null,
+                                 null,
+                                 null
+						]
+
+		}
+		
+		);
+} );
+</script> 
 </head>
 <body>
 
 
 <%= yield %>
+
+
 </body>
 </html>

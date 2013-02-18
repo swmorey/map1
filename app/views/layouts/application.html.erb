@@ -35,6 +35,7 @@
 <div id="sitemenu" class="rounded-corners"> 
 <ul>
 <li><a class="on_website fancybox.iframe" href="/main/about">About</a></li>
+<li><a class="tablemaster fancybox.iframe" href="/districts">Table View</a></li>
 </ul>
 </div>
 <div id="controls" class="rounded-corners"> 
@@ -231,11 +232,26 @@ $(document).ready(function() {
 		closeClick	: false,
 		openEffect	: 'none',
 		closeEffect	: 'none',
-		'scrolling'   : 'no'
+		scrolling   : 'no'
 	});
 });
 </script>
  
+    <script type = "text/javascript">
+$(document).ready(function() {
+	$(".tablemaster").fancybox({
+		maxWidth	: 1200,
+		maxHeight	: 1000,
+		fitToView	: false,
+		width		: '95%',
+		height		: '95%',
+		autoSize	: false,
+		closeClick	: false,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+	});
+});
+</script>
 
 </body>
 </html>

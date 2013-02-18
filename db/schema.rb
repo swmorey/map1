@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130210094357) do
+ActiveRecord::Schema.define(:version => 20130217172805) do
 
   create_table "districtclasses", :force => true do |t|
     t.string   "title"
@@ -36,8 +36,23 @@ ActiveRecord::Schema.define(:version => 20130210094357) do
     t.integer  "district_class"
     t.float    "latitude"
     t.float    "longitude"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.integer  "childrens_circ"
+    t.integer  "percent_childrens_circ"
+    t.integer  "nonchildren_circ"
+    t.integer  "circ"
+    t.float    "circ_per_capita"
+    t.float    "material_turnover"
+    t.integer  "reference_transactions"
+    t.float    "reference_transactions_per_capita"
+    t.integer  "ill_borrowed"
+    t.integer  "ill_loaned"
+    t.integer  "visits"
+    t.float    "visits_per_capita"
+    t.integer  "public_computer_users"
+    t.integer  "registered_users"
+    t.integer  "collection_size"
+    t.datetime "created_at",                        :null => false
+    t.datetime "updated_at",                        :null => false
   end
 
   create_table "locations", :force => true do |t|
