@@ -79,7 +79,8 @@
             mapTypeControl: false,
             mapTypeId: google.maps.MapTypeId.HYBRID,
             maxZoom: 19, 
-            minZoom: 6, 
+            minZoom: 6,
+            zoom: 19, 
             
 
            
