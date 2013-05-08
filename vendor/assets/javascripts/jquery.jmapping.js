@@ -76,19 +76,16 @@
             navigationControlOptions: {
               style: google.maps.NavigationControlStyle.SMALL
             },
+            center: new google.maps.LatLng(43.675818, -84.803467),
             mapTypeControl: false,
             mapTypeId: google.maps.MapTypeId.HYBRID,
             maxZoom: 19, 
             minZoom: 6,
-            zoom: 19, 
+            zoom: 19,
             
-
-           
           });
         }
-        map.setCenter(new google.maps.LatLng(37.4419, -122.1419)),
-        map.fitBounds(bounds);
-
+     
 var listener = google.maps.event.addListener(map, "idle", function() { 
   if (map.getZoom() >7) map.setZoom(7); 
   google.maps.event.removeListener(listener); 
@@ -171,7 +168,7 @@ var listener = google.maps.event.addListener(map, "idle", function() {
             position: point,
             map: map,
             icon: new google.maps.MarkerImage(
-    'https://dl.dropbox.com/u/228894/libraryred.png',
+    'http://empower.swmorey.com/images/libraryred.png',
     new google.maps.Size(32, 37),
     new google.maps.Point(0,0),
     new google.maps.Point(17, 32)
