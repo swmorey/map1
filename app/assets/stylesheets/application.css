@@ -21,6 +21,15 @@ body, html {
   margin: 0 0 0 0;
 }
 
+* {
+  -webkit-transition-property: none!important;
+  transition-property: none!important;
+  /* These doesn't affect anything, but, just in case. */
+  -webkit-animation: none!important;
+  animation: none!important;
+}
+
+
 
 #wrapper 
 {
@@ -38,7 +47,7 @@ body, html {
   position: absolute; 
   top: 30px; 
   left: 40px; 
- 
+  z-index: 99; 
 
   padding: 10px;
   overflow: hidden;

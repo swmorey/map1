@@ -82,7 +82,6 @@
             maxZoom: 19, 
             minZoom: 6,
             zoom: 19,
-            
           });
         }
      
@@ -160,7 +159,7 @@ var listener = google.maps.event.addListener(map, "idle", function() {
               icon: icon_options,  
               position: point,
               map: map,
-           
+              optimized: false,
             });
           } 
         } else {

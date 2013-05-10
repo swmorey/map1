@@ -3,7 +3,7 @@
 <head>
   <title>Map</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
-<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.11&sensor=false"></script>
+<script type="text/javascript" src="http://maps.google.com/maps/api/js?v=3.5&sensor=false"></script>
 
 <style type="text/css">
     .hidden {display:none;}
@@ -164,7 +164,7 @@ filter:alpha(opacity=75); /* For IE8 and earlier */ ">
   <script type="text/javascript">
 $(document).ready(function(){
 $('#map').jMapping({
-
+always_show_markers: true,
     category_icon_options: function(category){
 
        if (category.match('class1')) {
